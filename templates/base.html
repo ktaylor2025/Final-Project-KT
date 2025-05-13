@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}MBTA Station Finder{% endblock %}</title>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MBTA Station Finder</h1>
+            <p>Find the nearest MBTA station from any location in Boston area</p>
+        </header>
+
+        {% block content %}{% endblock %}
+
+        <footer>
+            <p>Created for OIM3640 Software Design Final Project</p>
+        </footer>
+    </div>
+
+    {% block scripts %}
+    {% endblock %}
+</body>
+</html>
